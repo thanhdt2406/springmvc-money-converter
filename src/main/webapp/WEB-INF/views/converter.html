@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Converter</title>
+</head>
+<body>
+<form th:action="@{/convert}" th:method="post">
+    <div>
+        <label>USD</label>
+        <input type="text" th:name="usd" th:value="${usd}">
+    </div>
+    <div>
+        <label>VND</label>
+        <input type="number" th:value="${vnd}" disabled>
+    </div>
+    <input type="submit" value="Convert">
+</form>
+</body>
+</html>
